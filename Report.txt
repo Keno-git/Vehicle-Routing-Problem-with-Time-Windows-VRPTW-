@@ -1,0 +1,4 @@
+brief report of what modifications you did and why
+
+The second document does not need to be structured in a formal style. 
+A numbered list with your modifications and a brief paragraph arguing your rationale behind each modification
