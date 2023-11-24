@@ -2,3 +2,36 @@ brief report of what modifications you did and why
 
 The second document does not need to be structured in a formal style. 
 A numbered list with your modifications and a brief paragraph arguing your rationale behind each modification
+in route construction if P only has 0 then gives nan in P / sum(P) and gives invalid next_node
+if(sum(P) != 0):
+  P = P / sum(P) # gives nan sometimes if only zeros in P
+# selecting the next node
+val = np.random.rand()
+choice = np.where(val < P.cumsum())
+if(len(choice[0]) != 0):
+    next_node = choice[0][0]
+
+The quality doesnt change depedning on route. 
+** Print out of 2 generations always the same quality regardless of route
+The best solution in the 0 generation is: [2 1 0 4 3] with quality: 15.888150244053987
+17.507189835430964
+18.07900931777829
+16.459969726401315
+17.377206336792337
+18.534465588345896
+16.74599736669945
+16.459969726401315
+18.07900931777829
+16.459969726401315
+15.888150244053987
+The best solution in the 1 generation is: [0 1 4 2 3] with quality: 15.888150244053987
+17.507189835430964
+18.07900931777829
+16.459969726401315
+17.377206336792337
+18.534465588345896
+16.74599736669945
+16.459969726401315
+18.07900931777829
+16.459969726401315
+15.888150244053987
